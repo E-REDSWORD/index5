@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+
+    <!-- ربط Bootstrap 5 -->
+    
+    <style>
+        body {
+            background-image: url('st.jpg'); /* تعيين صورة الخلفية */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* تصميم النموذج مع الشفافية */
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8); /* شفافية مع خلفية بيضاء */
+            width: 350px;
+            
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* صورة المستخدم */
+        .profile-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        /* تصميم الحقول */
+        .input-field {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 20px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .input-field::placeholder {
+            color: #aaa;
+        }
+
+        /* تصميم زر Login */
+        .btn-login {
+            
+            width: 100%;
+            padding: 9px;
+            background-color: hsl(245, 99%, 38%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-login:hover {
+            background-color: #34495e;
+        }
+
+        /* تعديل مكان روابط Remember me و Forgot Password */
+        .forgot-password,
+        .remember-me {
+            font-size: 14px;
+            color: #555;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .forgot-password {
+            text-align: right;
+        }
+
+        .remember-me {
+            text-align: left;
+        }
+
+        /* النص بين الزر */
+        .or-login {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* أيقونات الشبكات الاجتماعية */
+        .social-icons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ddd;
+            cursor: pointer;
+        }
+
+        .social-icon img {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* تلوين الأيقونات */
+        .google {
+            background-color: #db4437;
+        }
+
+        .facebook {
+            background-color: #3b5998;
+        }
+
+        .twitter {
+            background-color: #55acee;
+        }
+
+        .instagram {
+            background-color: #e4405f;
+        }
+
+        .linkedin {
+            background-color: #0077b5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <!-- صورة المستخدم -->
+        <img src="user2.jpg" alt="User" class="profile-img">
+
+        <!-- نموذج تسجيل الدخول -->
+        <form>
+            <input type="email" class="input-field" placeholder="Enter Email" required>
+            <input type="password" class="input-field" placeholder="Enter Password" required>
+
+            <!-- روابط Forgot Password و Remember me مع تبديل المكان -->
+            <div style="display: flex; justify-content: space-between;">
+                <label class="remember-me">
+                    <input type="checkbox"> Remember me
+                </label>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+
+            <!-- زر Login -->
+            <button type="submit" class="btn-login">Login</button>
+
+            <!-- النص بين الزر -->
+            <div class="or-login">Or Login With</div>
+
+            <!-- أيقونات الشبكات الاجتماعية -->
+            <div class="social-icons">
+                <div class="social-icon google">
+                    <img src="face.png" alt="Google">
+                </div>
+                <div class="social-icon facebook">
+                    <img src="t.jpg" alt="Facebook">
+                </div>
+                <div class="social-icon twitter">
+                    <img src="gog.png" alt="Twitter">
+                </div>
+                <div class="social-icon instagram">
+                    <img src="insta.png" alt="Instagram">
+                </div>
+                <div class="social-icon linkedin">
+                    <img src="in.jpg" alt="LinkedIn">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- سكربت لإظهار كلمة المرور -->
+    <script>
+        document.querySelector('.forgot-password').addEventListener('click', function (e) {
+            e.preventDefault();
+            alert('يتم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني.');
+        });
+    </script>
+</body>
+
+</html>
