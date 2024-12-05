@@ -1,199 +1,194 @@
 <!DOCTYPE html>
 <html lang="ar">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسجيل الدخول</title>
-
-    <!-- ربط Bootstrap 5 -->
-    
+    <title>إنشاء حساب جوجل</title>
     <style>
         body {
-            background-image: url('st.jpg'); /* تعيين صورة الخلفية */
-            background-size: cover;
-            background-position: center;
+            font-family: Arial, sans-serif;
+            background-color: white;
             margin: 0;
             padding: 0;
+        }
+
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: row;
         }
 
-        /* تصميم النموذج مع الشفافية */
-        .login-container {
-            background-color: rgba(255, 255, 255, 0.8); /* شفافية مع خلفية بيضاء */
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            /*box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);*/
+            border-radius: 8px;
+            width: 360px;
+            text-align:center
+        }
+
+        .left img {
+            width: 240px;
+            height: 240px;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
             width: 350px;
-            
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
-        /* صورة المستخدم */
-        .profile-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-bottom: 20px;
+        .form-container img {
+            width: 100px;
+            margin-bottom: 10px;
         }
 
-        /* تصميم الحقول */
-        .input-field {
-            width: 100%;
-            padding: 6px;
+        .form-container p {
+            font-size: 14px;
+            color: #5f6368;
+            margin-top: 10px;
             margin-bottom: 20px;
-            border-radius: 25px;
+            text-align: right; /* النص الأخير محاذٍ إلى اليمين */
+        }
+
+        .form-container .rtl-section {
+            direction: rtl; /* يجعل النص والصورة من اليمين إلى اليسار */
+            text-align: right; /* محاذاة النصوص داخل القسم إلى اليمين */
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
             border: 1px solid #ddd;
-            font-size: 16px;
+            border-radius: 5px;
             box-sizing: border-box;
+            text-align: left; /* الحقول تبقى بمحاذاة اليسار */
         }
 
-        .input-field::placeholder {
-            color: #aaa;
-        }
-
-        /* تصميم زر Login */
-        .btn-login {
-            
-            width: 100%;
-            padding: 9px;
-            background-color: hsl(245, 99%, 38%);
+        .form-container button {
+            width: 20%; /* تغيير عرض الزر إلى 20% */
+            padding: 12px;
+            background-color: #4285F4;
             color: white;
             border: none;
-            border-radius: 25px;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            text-align: left; /* محاذاة الزر من اليسار */
         }
 
-        .btn-login:hover {
-            background-color: #34495e;
+        .form-container button:hover {
+            background-color: #357ae8;
         }
 
-        /* تعديل مكان روابط Remember me و Forgot Password */
-        .forgot-password,
-        .remember-me {
-            font-size: 14px;
-            color: #555;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        .forgot-password {
-            text-align: right;
-        }
-
-        .remember-me {
-            text-align: left;
-        }
-
-        /* النص بين الزر */
-        .or-login {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        /* أيقونات الشبكات الاجتماعية */
-        .social-icons {
-            display: flex;
-            justify-content: space-around;
+        .form-container .terms {
+            font-size: 13px;
+            color: #5f6368;
+            text-align: center;
             margin-top: 20px;
         }
 
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+        .name-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #ddd;
+            justify-content: space-between;
+        }
+
+        .name-container input {
+            width: 48%;
+            text-align: left; /* إدخال النصوص من اليسار */
+        }
+
+        .show-password {
+            font-size: 14px;
+            color: #1a73e8;
             cursor: pointer;
+            text-align: right; /* محاذاة النص إلى اليمين */
         }
 
-        .social-icon img {
-            width: 20px;
-            height: 20px;
-        }
-
-        /* تلوين الأيقونات */
-        .google {
-            background-color: #db4437;
-        }
-
-        .facebook {
-            background-color: #3b5998;
-        }
-
-        .twitter {
-            background-color: #55acee;
-        }
-
-        .instagram {
-            background-color: #e4405f;
-        }
-
-        .linkedin {
-            background-color: #0077b5;
+        .login-link {
+            font-size: 14px;
+            color: #1a73e8;
+            cursor: pointer;
+            text-align: right; /* محاذاة النص إلى اليمين */
+            display: inline-block;
+            margin-top: 10px;
         }
     </style>
 </head>
-
 <body>
-    <div class="login-container">
-        <!-- صورة المستخدم -->
-        <img src="user2.jpg" alt="User" class="profile-img">
+    <div class="container">
+        <!-- Left Side (Logo and text) -->
+        <div class="left">
+            <img src="loc.png" alt="Google Logo">
+            <h2>حساب واحد يمكنك من استخدام جميع خدمات Google.</h2>
+        </div>
 
-        <!-- نموذج تسجيل الدخول -->
-        <form>
-            <input type="email" class="input-field" placeholder="Enter Email" required>
-            <input type="password" class="input-field" placeholder="Enter Password" required>
+        <!-- Right Side (Form) -->
+        <div class="right">
+            <div class="form-container">
+                <!-- القسم الذي يحتوي على الصورة والنص ويكون RTL -->
+                <div class="rtl-section">
+                    <img src="google.png" alt="Google Text Logo">
+                    <h3>انشاء حساب لك علىGoogle.</h3>
+                    <p>المتابعة إلى Gmail</p>
+                </div>
 
-            <!-- روابط Forgot Password و Remember me مع تبديل المكان -->
-            <div style="display: flex; justify-content: space-between;">
-                <label class="remember-me">
-                    <input type="checkbox"> Remember me
-                </label>
-                <a href="#" class="forgot-password">Forgot Password?</a>
+                <!-- نموذج التسجيل -->
+                <form action="#" method="POST">
+                    <!-- Name fields -->
+                    <div class="name-container">
+                        <input type="text" name="first_name" placeholder="الاسم الأول" required>
+                        <input type="text" name="last_name" placeholder="اسم العائلة" required>
+                    </div>
+                    <!-- Username and password fields -->
+                    <input type="text" name="username" placeholder="اسم المستخدم" required>
+                    <input type="password" name="password" placeholder="كلمة المرور" required>
+                    <input type="password" name="confirm_password" placeholder="تأكيد كلمة المرور" required>
+                    
+                    <!-- إضافة خيار عرض كلمة المرور -->
+                    <div class="show-password">
+                        <input type="checkbox" id="show-password" onclick="togglePassword()"> عرض كلمة المرور
+                    </div>
+
+                    <!-- زر التالي -->
+                    <button type="submit">التالي</button>
+
+                    <!-- رابط تسجيل الدخول -->
+                    <div class="login-link">
+                        <a href="#">تسجيل الدخول بدلاً من ذلك  </a>
+                    </div>
+                </form>
+
+                <!-- النص أسفل النموذج -->
+                <div class="terms">
+                    <p>حساب واحد يمكنك من استخدام جميع خدمات Google.</p>
+                </div>
             </div>
-
-            <!-- زر Login -->
-            <button type="submit" class="btn-login">Login</button>
-
-            <!-- النص بين الزر -->
-            <div class="or-login">Or Login With</div>
-
-            <!-- أيقونات الشبكات الاجتماعية -->
-            <div class="social-icons">
-                <div class="social-icon google">
-                    <img src="face.png" alt="Google">
-                </div>
-                <div class="social-icon facebook">
-                    <img src="t.jpg" alt="Facebook">
-                </div>
-                <div class="social-icon twitter">
-                    <img src="gog.png" alt="Twitter">
-                </div>
-                <div class="social-icon instagram">
-                    <img src="insta.png" alt="Instagram">
-                </div>
-                <div class="social-icon linkedin">
-                    <img src="in.jpg" alt="LinkedIn">
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
 
-    <!-- سكربت لإظهار كلمة المرور -->
     <script>
-        document.querySelector('.forgot-password').addEventListener('click', function (e) {
-            e.preventDefault();
-            alert('يتم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني.');
-        });
+        // وظيفة لإظهار/إخفاء كلمة المرور
+        function togglePassword() {
+            var passwordField = document.querySelector("input[name='password']");
+            var confirmPasswordField = document.querySelector("input[name='confirm_password']");
+            var showPasswordCheckbox = document.getElementById("show-password");
+
+            if (showPasswordCheckbox.checked) {
+                passwordField.type = "text";
+                confirmPasswordField.type = "text";
+            } else {
+                passwordField.type = "password";
+                confirmPasswordField.type = "password";
+            }
+        }
     </script>
 </body>
-
 </html>
