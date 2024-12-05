@@ -1,0 +1,152 @@
+/* إعدادات عامة */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e9ebee;
+  }
+  
+  /* رأس الصفحة */
+  .header {
+    background-color: #3b5998;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header .logo {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .header .login {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .login label {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .header .login input {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  .header .login button {
+    background-color: #5005b8;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* محتوى الصفحة */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+  }
+  
+  .left-section {
+    flex: 1;
+    margin-right: 50px;
+    text-align: left; /* محاذاة النص لليسار */
+  }
+  
+  .left-section h1 {
+    color: #3b5998;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .left-section .world-map {
+    max-width: 80%;
+  }
+  
+  .right-section {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .signup-box {
+    background-color:transparent;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+  
+  .signup-box h2 {
+    color: #3b5998;
+  }
+  
+  .signup-box p {
+    margin-bottom: 15px;
+  }
+  
+  .signup-box input,
+  .signup-box select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .input-row .half-width {
+    width: 48%;
+  }
+  
+  .signup-box .birth-date {
+    margin: 15px 0;
+  }
+  
+  .signup-box .birth-date label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .signup-box .birth-date select {
+    width: 20%;
+    margin-right: 5px;
+  }
+  
+  .signup-box .gender {
+    display: flex; /* استخدام Flexbox لجعل العناصر في نفس السطر */
+    justify-content: flex-start; /* لجعل الأزرار تبدأ من اليسار */
+    gap: 10px; /* إضافة مسافة بين الأزرار */
+  }
+  
+  .signup-box .gender label {
+    display: flex; /* تنسيق النص مع الزر بشكل أفقي */
+    align-items: center; /* لضمان المحاذاة العمودية */
+  }
+  
+  .signup-btn {
+    width: 40%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .signup-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .terms {
+    font-size: 12px;
+    color: #555;
+    margin-top: 10px;
+  }
+  

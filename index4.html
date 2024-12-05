@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إنشاء حساب - Facebook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">facebook</div>
+    <div class="login">
+      <label for="email">البريد الإلكتروني أو الهاتف</label>
+      <input type="text" id="email">
+      <label for="password">كلمة السر</label>
+      <input type="password" id="password">
+      <button>تسجيل الدخول</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- القسم الأيسر -->
+    <div class="left-section">
+      <h1>يساعدك فيسبوك على التواصل ومشاركة مع كل الأشخاص في حياتك.</h1>
+      <img src="map.jpg" alt="خريطة العالم" class="world-map">
+    </div>
+<!-- 0 4px 8px rgba(0, 0, 0, 0.2) -->
+    <!-- القسم الأيمن -->
+    <div class="right-section">
+      <div class="signup-box">
+        <h2>التسجيل</h2>
+        <p>مجاني، وسيبقى كذلك دائمًا.</p>
+        <div class="input-row">
+          <input type="text" placeholder="الاسم الأول" class="half-width">
+          <input type="text" placeholder="اسم العائلة" class="half-width">
+        </div>
+        <input type="email" placeholder="بريدك الإلكتروني">
+        <input type="email" placeholder="أعد إدخال البريد الإلكتروني">
+        <input type="password" placeholder="كلمة السر الجديدة">
+        <div class="birth-date">
+          <label>تاريخ الميلاد</label>
+          <select>
+            <option>اليوم</option>
+          </select>
+          <select>
+            <option>الشهر</option>
+          </select>
+          <select>
+            <option>السنة</option>
+          </select>
+        </div>
+        <div class="gender">
+            <label>
+                <input type="radio" name="gender" value="male"> ذكر
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female"> أنثى
+              </label>
+        </div>
+        <p class="terms">
+          بالنقر على التسجيل، توافق على شروطنا. تعرف على سياسة الخصوصية وسياسة ملفات تعريف الارتباط.
+        </p>
+        <button class="signup-btn">التسجيل</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
